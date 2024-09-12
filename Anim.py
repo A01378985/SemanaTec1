@@ -1,3 +1,15 @@
+'''
+Acerca de la elaboración:
+Para desarrollar este programa, primero nos referimos a tutoriales y videos de YouTube sobre el uso
+de la librería PyGame. Algunos de estos videos se dedicaban más a la elaboración de videojuegos y
+elementos interactivos en vez de animaciones. Posteriormente usamos la herramienta de GitHub Copilot
+para ver un ejemplo del desplazamiento de una imagen en un lienzo, así como el bucle que da la
+funcionalidad de PyGame.
+Esta referencia nos ayudó a enmarcar nuestras propias funciones, que posteriormente usamos dentro de
+este bucle para lograr la funcionalidad que queríamos.
+
+'''
+# **************************************************************************************************
 # Lucio Arturo Reyes Castillo - A0137898
 # Arturo Barrios Mendoza - A01168331
 # Leyberth Jaaziel Castillo Guerra - A01749505
