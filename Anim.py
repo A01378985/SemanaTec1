@@ -9,11 +9,13 @@ pygame.display.set_caption('AnimalCrossingPirata')
 
 BLUE = (196, 202, 220)
 
+# Cargar las imágenes
 granjero_img = pygame.image.load('granjero.png')
 zorro_img = pygame.image.load('zorro.png')
 ganso_img = pygame.image.load('ganso.png')
 maiz_img = pygame.image.load('maiz.png')
 barco_img = pygame.image.load('barco.png')
+fondo_img = pygame.image.load('fondobueno.png')  # Cargar la imagen del fondo
 
 posiciones = {
     'granjero': [0, 100],
@@ -35,18 +37,18 @@ def dibujar_personajes():
 def abordar(personaje):
     for i in range(14):
         posiciones[personaje][1] += 10
-        screen.fill(BLUE)
+        screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
         dibujar_personajes()
         pygame.display.flip()
-        pygame.time.delay(100)
+        pygame.time.delay(15)
 
 def desembarcar(personaje):
     for i in range(14):
         posiciones[personaje][1] -= 10
-        screen.fill(BLUE)
+        screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
         dibujar_personajes()
         pygame.display.flip()
-        pygame.time.delay(100)
+        pygame.time.delay(15)
 
 def horizontal(direc, pers1, *args):
     if len(args) < 1:
@@ -54,18 +56,18 @@ def horizontal(direc, pers1, *args):
             for i in range(48):
                 posiciones['barco'][0] += 20
                 posiciones[pers1][0] += 20
-                screen.fill(BLUE)
+                screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(100)
+                pygame.time.delay(15)
         else:
             for i in range(48):
                 posiciones['barco'][0] -= 20
                 posiciones[pers1][0] -= 20
-                screen.fill(BLUE)
+                screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(100)
+                pygame.time.delay(20)
     else:
         pers2 = args[0]
         if direc:
@@ -73,19 +75,19 @@ def horizontal(direc, pers1, *args):
                 posiciones['barco'][0] += 20
                 posiciones[pers1][0] += 20
                 posiciones[pers2][0] += 20
-                screen.fill(BLUE)
+                screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(100)
+                pygame.time.delay(20)
         else:
             for i in range(48):
                 posiciones['barco'][0] -= 20
                 posiciones[pers1][0] -= 20
                 posiciones[pers2][0] -= 20
-                screen.fill(BLUE)
+                screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(100)
+                pygame.time.delay(20)
 
 # **************************************************************************************************
 # **************************************************************************************************
@@ -116,9 +118,8 @@ while True:
             movimientos += 1
             direc = not direc
 
-    screen.fill(BLUE)
+    screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
     dibujar_personajes()
     pygame.display.flip()
 
     pygame.time.Clock().tick(1)
-    False
