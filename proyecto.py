@@ -33,7 +33,7 @@ def HCR():
     while len(LadoB)!=4:
         p1, p2 = trayecto(F, D)
         if estado_valido(F) and estado_valido(D):
-            print('Continuamos')
+            #print('Continuamos')
             Path.append((p1, p2))
             F, D = D, F
         else:
@@ -41,7 +41,7 @@ def HCR():
             reinicia_sistema()
             F = LadoA
             D = LadoB
-    print('Intentos:',intentos)
+    #print('Intentos:',intentos)
     #print(Path)
     return(Path)
 
@@ -52,4 +52,4 @@ def solucion_optima():
         Path = HCR()
     return(Path)
 
-print(solucion_optima())
+#print(solucion_optima())
