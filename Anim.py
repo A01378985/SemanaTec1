@@ -1,3 +1,8 @@
+# Lucio Arturo Reyes Castillo - A0137898
+# Arturo Barrios Mendoza - A01168331
+# Leyberth Jaaziel Castillo Guerra - A01749505
+# Israel González Huerta - A01751433
+
 #importación de librerias
 
 import pygame
@@ -78,7 +83,7 @@ def horizontal(direc, pers1, *args):
                 screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(20)
+                pygame.time.delay(15)
     else:
         pers2 = args[0]
         if direc:
@@ -89,7 +94,7 @@ def horizontal(direc, pers1, *args):
                 screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(20)
+                pygame.time.delay(15)
         else:
             for i in range(48):
                 posiciones['barco'][0] -= 20    #movimiento hacia la izquierda del barco
@@ -98,7 +103,7 @@ def horizontal(direc, pers1, *args):
                 screen.blit(fondo_img, (0, 0))  # Dibujar el fondo
                 dibujar_personajes()
                 pygame.display.flip()
-                pygame.time.delay(20)
+                pygame.time.delay(15)
 
 # **************************************************************************************************
 # **************************************************************************************************

@@ -1,3 +1,8 @@
+# Lucio Arturo Reyes Castillo - A0137898
+# Arturo Barrios Mendoza - A01168331
+# Leyberth Jaaziel Castillo Guerra - A01749505
+# Israel González Huerta - A01751433
+
 import random
 
 LadoA = ['Granjero','Zorro','Ganso','Maiz']
